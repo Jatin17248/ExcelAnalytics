@@ -1,55 +1,67 @@
-import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import FileUpload from './components/FileUpload';
-import Features from './components/Features';
-import HowItWorks from './components/HowItWorks';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider, useAuth } from './context/AuthContext';
+
+import Layout from './Components/Layout/Layout';
+import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
+
+/* ---------- Pages ---------- */
+import Welcome        from './Pages/Welcome/Welcome';
+import UploadExcel    from './Pages/UploadExcel/UploadExcel';
+import Register       from './Pages/Register/Register';
+import Login1         from './Pages/Login/Login1';
+import Dashboard      from './Pages/Dashboard/Dashboard';
+import Report         from './Pages/Report/Report';
+import Contact        from './Pages/Contact/Contact';
+import About          from './Pages/About/About';
+import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
+import AIInsights     from './Pages/AIInsights/AIInsights';
+import Settings       from './Pages/Settings/Settings';
+import DeepAnalysis   from './Pages/DeepAnalysis/DeepAnalysis';
+import ActivityLog    from './Pages/ActivityLog/ActivityLog';
+import UserManagement from './Pages/UserManagement/UserManagement';  
+
 import './App.css';
 
-function App() {
-  const [file, setFile] = useState(null);
-
-  const handleFileSelect = (selectedFile) => {
-    setFile(selectedFile);
-  };
+function AppContent() {
+  const { user } = useAuth();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white">
-      <Navbar />
-      
-      {/* Hero Section */}
-      <div className="container mx-auto px-4 pt-32 pb-20">
-        <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-blue-600 text-transparent bg-clip-text">
-            Transform Your Excel Data into Powerful Insights
-          </h1>
-          <p className="text-xl text-gray-300 mb-12">
-            Upload your Excel files and get instant analytics, visualizations, and actionable insights.
-            No complex setup required.
-          </p>
-        </div>
+    <Router>
+      <Layout>
+        <Routes>
+          {/* Public */}
+          <Route path="/"               element={user ? <Dashboard /> : <Welcome />} />
+          <Route path="/register/:role" element={<Register />} />
+          <Route path="/login/:role"    element={<Login1 />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
 
-        <FileUpload onFileSelect={handleFileSelect} />
+          {/* Protected */}
+          <Route path="/dashboard"   element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+          <Route path="/upload"      element={<ProtectedRoute><UploadExcel /></ProtectedRoute>} />
+          <Route path="/reports"     element={<ProtectedRoute><Report /></ProtectedRoute>} />
+          <Route path="/ai-insights" element={<ProtectedRoute><AIInsights /></ProtectedRoute>} />
+          <Route path="/analyze"     element={<ProtectedRoute><DeepAnalysis /></ProtectedRoute>} />
+          <Route path="/activity-log"element={<ProtectedRoute><ActivityLog /></ProtectedRoute>} />
+          <Route path="/settings"    element={<ProtectedRoute><Settings /></ProtectedRoute>} />
+          <Route path="/contact"     element={<ProtectedRoute><Contact /></ProtectedRoute>} />
+          <Route path="/about"       element={<ProtectedRoute><About /></ProtectedRoute>} />
 
-        {file && (
-          <div className="mt-8 text-center animate-fadeIn">
-            <button className="px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all duration-200 shadow-lg hover:shadow-green-500/25">
-              Analyze File
-            </button>
-          </div>
-        )}
-      </div>
+          {/* NEW: User Management */}
+          <Route path="/users" element={<ProtectedRoute><UserManagement /></ProtectedRoute>} />
 
-      <Features />
-      <HowItWorks />
-
-      {/* Footer */}
-      <footer className="border-t border-gray-800 py-8">
-        <div className="container mx-auto px-4 text-center text-gray-400">
-          <p>© 2025 ExcelAnalytics. Designed by Team 23 of Zidio Development</p>
-        </div>
-      </footer>
-    </div>
+          {/* Legacy redirects */}
+          <Route path="/login"    element={<Navigate to="/" replace />} />
+          <Route path="/register" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
+  );
+}
