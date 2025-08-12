@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --primary-dark: #1E2230;
   --primary-slate: #2B3144;
   --accent-cyan: #1EA7FF;
@@ -394,4 +394,393 @@
   .feature-grid {
     grid-template-columns: 1fr;
   }
+} */
+
+/* Welcome.css */
+
+/* .welcome-container {
+  font-family: 'Inter', sans-serif;
+  color: #1e293b;
+  background: linear-gradient(to bottom right, #f8fafc, #e2e8f0);
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.tagline p {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #334155;
+}
+
+.feature-rotator {
+  background: #e0f2fe;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  display: inline-block;
+  font-weight: 600;
+  color: #0284c7;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tech-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat-item {
+  background: #f1f5f9;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.role-selection h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  color: #1e293b;
+}
+
+.role-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.role-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 300px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.role-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.role-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.role-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  color: #475569;
+}
+
+.role-card ul {
+  padding-left: 1rem;
+  list-style-type: disc;
+  color: #64748b;
+}
+
+.auth-section {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #e2e8f0;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 2rem;
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.auth-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.auth-btn.primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.auth-btn.secondary {
+  background: #cbd5e1;
+  color: #1e293b;
+}
+
+.change-role-btn {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #334155;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.tech-features {
+  margin-top: 4rem;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.feature-item {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 250px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-item h4 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+  font-size: 0.9rem;
+  color: #64748b;
+} */
+
+
+
+.welcome-wrapper {
+  font-family: 'Segoe UI', sans-serif;
+  color: #0f172a;
+  background: #f9fafb;
+  padding: 2rem;
+}
+
+/* HERO */
+.welcome-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.welcome-brand {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.brand-icon {
+  margin-right: 0.5rem;
+}
+.brand-tagline {
+  font-size: 1.2rem;
+  color: #475569;
+  margin-bottom: 1rem;
+}
+.feature-banner .feature-highlight {
+  background: #e0f2fe;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  color: #0369a1;
+  font-weight: 600;
+}
+
+/* STATS */
+.welcome-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.stat h3 {
+  font-size: 1.5rem;
+  color: #0f172a;
+}
+.stat p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* ROLE SELECTION */
+.section-heading {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+.role-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.role-tile {
+  width: 280px;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.role-tile:hover {
+  transform: translateY(-4px);
+}
+.role-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.role-tile h3 {
+  margin-bottom: 0.25rem;
+}
+.role-tile p {
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+/* AUTH */
+.auth-section {
+  text-align: center;
+}
+.role-chip {
+  display: inline-block;
+  background: #e2e8f0;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+.auth-cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.btn {
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.btn.primary {
+  background: #2563eb;
+  color: white;
+}
+.btn.secondary {
+  background: #cbd5e1;
+  color: #1e293b;
+}
+.btn.link {
+  background: none;
+  border: none;
+  margin-top: 1rem;
+  color: #334155;
+  text-decoration: underline;
+}
+
+/* FEATURES */
+.welcome-features {
+  margin-top: 4rem;
+}
+.features-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.feature-card {
+  width: 260px;
+  background: #f1f5f9;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.feature-card h4 {
+  margin-bottom: 0.3rem;
+  color: #0f172a;
+}
+.feature-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* FOOTER */
+.welcome-footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+.welcome-footer a {
+  color: #2563eb;
+  text-decoration: none;
+}
+.welcome-footer a:hover {
+  text-decoration: underline;
 }
