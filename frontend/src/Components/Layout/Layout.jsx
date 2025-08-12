@@ -14,8 +14,10 @@ const Layout = ({ children }) => {
     <div className="layout">
       <Sidebar />
       <main className="main-content">
-        {children}
+         {children}
+         
       </main>
+
     </div>
   );
 };

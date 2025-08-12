@@ -403,14 +403,14 @@ const Welcome = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="welcome-footer">
+      {/* <footer className="welcome-footer">
         <p>
           Designed & Developed by{' '}
           <a href="https://www.linkedin.com/in/jatin-sood-68627b28a/" target="_blank" rel="noopener noreferrer">
             Jatin Sood
           </a>
         </p>
-      </footer>
+      </footer> */}
     </div>
   );
 };
